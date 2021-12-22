@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/mini"
+                android:paddingEnd="@dimen/mini">
+
+                <ImageView
+                    android:id="@+id/menuIV"
+                    style="@style/NavIcons"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_round_menu"
+                    app:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mainNameTV"
+                    style="@style/AppHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/app_name"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/main_margin"
+                app:cardCornerRadius="@dimen/radius"
+                app:cardElevation="@dimen/card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/navLinearLayout"
+                        android:foreground="?attr/selectableItemBackground"
+                        tools:ignore="UnusedAttribute">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/NavIcons"
+                            app:srcCompat="@drawable/ic_round_monetization_on" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/AppTextNav"
+                                android:layout_marginTop="@dimen/mini"
+                                android:layout_marginBottom="0dp"
+                                android:text="@string/current_amount"
+                                android:textSize="@dimen/main"
+                                tools:ignore="SpUsage" />
+
+                            <TextView
+                                android:id="@+id/amountTV"
+                                style="@style/AppTextNav"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="@dimen/mini"
+                                android:text="@string/amount" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout style="@style/NavDividers" />
+
+                    <LinearLayout style="@style/navLinearLayout">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/NavIcons"
+                            app:srcCompat="@drawable/ic_round_attach_money" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/AppTextNav"
+                                android:layout_marginTop="@dimen/mini"
+                                android:layout_marginBottom="0dp"
+                                android:text="@string/cost"
+                                android:textSize="@dimen/main"
+                                tools:ignore="SpUsage" />
+
+                            <TextView
+                                android:id="@+id/costTV"
+                                style="@style/AppTextNav"
+                                android:layout_marginTop="@dimen/mini"
+                                android:layout_marginBottom="@dimen/mini"
+                                android:text="@string/cost" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/main_margin"
+                app:cardCornerRadius="@dimen/radius"
+                app:cardElevation="@dimen/card">
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        app:srcCompat="@drawable/ic_round_hourglass_top" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/remain"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/daysTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="@string/days_remain" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/netCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/main_margin"
+                app:cardCornerRadius="@dimen/radius"
+                app:cardElevation="@dimen/card">
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        app:srcCompat="@drawable/ic_round_network_check" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/internet"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/netTV"
+                            style="@style/AppTextNav"
+                            android:gravity="right"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="- -"
+                            tools:ignore="RtlHardcoded" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/main_margin"
+                app:cardCornerRadius="@dimen/radius"
+                app:cardElevation="@dimen/card">
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        app:srcCompat="@drawable/ic_round_wifi_tethering" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/nano"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/nanoTV"
+                            style="@style/AppTextNav"
+                            android:gravity="right"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="- -"
+                            tools:ignore="RtlHardcoded" />
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="CCQ"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/ccqTV"
+                            style="@style/AppTextNav"
+                            android:gravity="right"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="- -"
+                            tools:ignore="RtlHardcoded" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="292dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
